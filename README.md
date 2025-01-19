@@ -66,3 +66,10 @@ Platten als file / Virtuelle Maschine benutzt das.
 * ansible -i hosts all -m ping
   
 ansible-playbook -c=local --inventory=127.0.0.1, play.yml 
+
+### Playbook
+- name Test
+  hosts: all
+  gather_facts: false
+  task:
+    - debug: var=hostvars
