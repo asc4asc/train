@@ -15,13 +15,13 @@ ip link set dev eth0 master br0
 ip link set dev eth1 master br0
 ```
 ```
-* ip link add veth0 type veth peer name veth1
-* ip netns add ns1
-* ip link set veth0 netns ns1
-* ip -n ns1 addr add 10.0.1.0/24 dev veth0
-* ip -n ns1 link set veth0 up
-* ip -n ns1 link set lo up 
-* check with ping! and ip link!
+ip link add veth0 type veth peer name veth1
+ip netns add ns1
+ip link set veth0 netns ns1
+ip -n ns1 addr add 10.0.1.0/24 dev veth0
+ip -n ns1 link set veth0 up
+ip -n ns1 link set lo up 
+check with ping! and ip link!
 ```
 Stichworte: DHCP, networkmanager, /etv/network/interface/ (.d/), namespaces
 
@@ -62,11 +62,13 @@ mount -t ext4 /dev/loop1 /mnt
 
 # ansible
 
+### local!
+```
 * ansible -c=local -i localhost, all -m ping
 * ansible-playbook -c=local --inventory=127.0.0.1, play.yml 
+```
 
-
-### Playbook: play.yml
+#### Playbook: play.yml
 ```
 - name Test
   hosts: all
@@ -74,15 +76,17 @@ mount -t ext4 /dev/loop1 /mnt
   task:
     - debug: var=hostvars
 ```
-
+### mit ssh!
 * dafür openssh-server installieren.
-* ssh-keygen
-* cp .ssh/id_rsa.pub .ssh/authorized_keys
+```
+ssh-keygen
+cp .ssh/id_rsa.pub .ssh/authorized_keys
+
 ansible-playbook --inventory=localhost, play.yml
 
-* echo localhost >> hosts
-* ansible -i hosts all -m ping
-
+echo localhost >> hosts
+ansible -i hosts all -m ping
+```
 ----
 * https://salsa.debian.org/andi/debian-lan-ansible
 * git clone https://salsa.debian.org/andi/debian-lan-ansible # dann etwas testen auf frisch installiertem host.
