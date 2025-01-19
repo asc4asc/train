@@ -60,14 +60,16 @@ Platten als file / Virtuelle Maschine benutzt das.
 
 * ansible -c=local -i localhost, all -m ping
 * ansible-playbook -c=local --inventory=127.0.0.1, play.yml 
-´´´
+
+
 ### Playbook: play.yml
+```
 - name Test
   hosts: all
   gather_facts: false
   task:
     - debug: var=hostvars
-´´´
+```
 
 * dafür openssh-server installieren.
 * ssh-keygen
@@ -80,3 +82,10 @@ ansible-playbook --inventory=localhost, play.yml
 ----
 * https://salsa.debian.org/andi/debian-lan-ansible
 * git clone https://salsa.debian.org/andi/debian-lan-ansible # dann etwas testen auf frisch installiertem host.
+
+# Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
