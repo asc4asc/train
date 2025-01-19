@@ -58,10 +58,11 @@ Platten als file / Virtuelle Maschine benutzt das.
 
 # ansible
 
-* ansible -i hosts all -m ping
+* ansible -i localhost all -m ping
 * dafür openssh-server installieren.
 * ssh-keygen
 * cp .ssh/id_rsa.pub .ssh/authorized_keys
 * echo localhost >> hosts
+* ansible -i hosts all -m ping
   
 
