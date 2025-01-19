@@ -32,8 +32,10 @@ Stichworte: DHCP, networkmanager, /etv/network/interface/ (.d/), namespaces
 
 # Virt (anschauen)
 * kvm
-* proxmox
+* proxmox 
 * libvirt
+** virsh list
+** virsh start <guestname>
 * docker
 * lxc
 
