@@ -20,7 +20,7 @@ Notes for learning and be up to date in linux for me.
 * ip -n ns1 link set lo up 
 * check with ping! and ip link!
 
-* Stichwort: namespaces
+* Stichworte: DHCP, networkmanager, /etv/network/interface/ (.d/), namespaces
 
 # linux live
 * debian-live
