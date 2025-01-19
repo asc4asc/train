@@ -55,3 +55,13 @@ Platten als file / Virtuelle Maschine benutzt das.
 * apt upgrade
 
 * Unterschiede zu apt dist-upgrade apt-get aptitude ...... ????
+
+# ansible
+
+* ansible -i hosts all -m ping
+* dafür openssh-server installieren.
+* ssh-keygen
+* cp .ssh/id_rsa.pub .ssh/authorized_keys
+* echo localhost >> hosts
+  
+
