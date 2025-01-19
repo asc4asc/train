@@ -69,7 +69,10 @@ mount -t ext4 /dev/loop1 /mnt
 * ansible -c=local -i localhost, all -m ping
 * ansible-playbook -c=local --inventory=127.0.0.1, play.yml 
 ```
-
+```
+ansible -m gather_facts
+ansible all -c local -i localhost, -m apt -a upgrade=dist --become # --ask-become-pass ??? Testen !!
+```
 #### Playbook: play.yml
 ```
 - name Test
@@ -91,7 +94,6 @@ ansible-playbook --inventory=localhost, play.yml
 
 echo localhost >> hosts
 ansible -i hosts all -m ping
-ansible -m gather_facts
 ```
 ----
 * https://salsa.debian.org/andi/debian-lan-ansible
