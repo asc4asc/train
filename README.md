@@ -91,6 +91,7 @@ ansible-playbook --inventory=localhost, play.yml
 
 echo localhost >> hosts
 ansible -i hosts all -m ping
+ansible -m gather_facts
 ```
 ----
 * https://salsa.debian.org/andi/debian-lan-ansible
