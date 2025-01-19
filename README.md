@@ -20,6 +20,8 @@ Notes for learning and be up to date in linux for me.
 * ip -n ns1 link set lo up 
 * check with ping! and ip link!
 
+* Stichwort: namespaces
+
 # linux live
 * debian-live
 * toram
@@ -29,6 +31,8 @@ Notes for learning and be up to date in linux for me.
 * kvm
 * proxmox
 * libvirt
+* docker
+* lxc
 
 # chroot
 * chroot 
