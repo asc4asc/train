@@ -81,7 +81,10 @@ mount -t ext4 /dev/loop1 /mnt
 ```
 ssh-keygen
 cp .ssh/id_rsa.pub .ssh/authorized_keys
-
+Test: ssh localhost
+```
+### Jetzt ansible
+```
 ansible-playbook --inventory=localhost, play.yml
 
 echo localhost >> hosts
