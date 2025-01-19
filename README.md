@@ -65,4 +65,4 @@ Platten als file / Virtuelle Maschine benutzt das.
 * echo localhost >> hosts
 * ansible -i hosts all -m ping
   
-
+ansible-playbook -c=local --inventory=127.0.0.1, play.yml 
