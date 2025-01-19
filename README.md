@@ -48,3 +48,10 @@ Platten als file / Virtuelle Maschine benutzt das.
 
 * mkfs -t ext4 -v /dev/loop1
 * mount -t ext4 /dev/loop1 /mnt
+
+# Update
+* Grafisch mit mehreren reboots. Idioten sicher? Wenn was nicht geht kommt nicht mal ein sichtbarer Fehler? 
+* apt update
+* apt upgrade
+
+* Unterschiede zu apt dist-upgrade apt-get aptitude ...... ????
