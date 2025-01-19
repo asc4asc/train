@@ -24,3 +24,18 @@ Notes for learning and be up to date in linux for me.
 * kvm
 * proxmox
 * libvirt
+
+# chroot
+* chroot 
+* debootstrap
+
+Platten als file / Virtuelle Maschine benutzt das.
+* mout .... loop
+* losetup -a
+
+* dd if=/dev/zero of=/loopfile bs=1024 count=51200
+* losetup -f
+* losetup /dev/loop1 /loopfile
+
+* mkfs -t ext4 -v /dev/loop1
+* mount -t ext4 /dev/loop1 /mnt
