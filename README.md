@@ -94,6 +94,9 @@ ansible-playbook --inventory=localhost, play.yml
 
 echo localhost >> hosts
 ansible -i hosts all -m ping
+
+
+Beispiel: webserver apache/ local 127.0.. oder remote.
 ```
 ----
 * https://salsa.debian.org/andi/debian-lan-ansible
