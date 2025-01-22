@@ -1,6 +1,20 @@
 # Train
 
 Notes for learning and be up to date in linux for me.
+# proxmox
+
+pvecm status
+pvecm expected 3 im Notfall pvecm expected 1
+pvecm nodes
+
+### Noch checken
+systemctl status corosync
+systemctl restart corosync
+journalctl -b -u corosync
+
+# Man braucht mehrere Netzwerkkabel und denn Sinn zu kapieren
+qm migrate 106 tre --online --migration_network 10.1.2.0/24
+``` 10.1.2.0/24 könnte z.B. eine schelle Direktverbindung sein. ``` 
 
 # Network 
 ```
