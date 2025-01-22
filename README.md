@@ -14,6 +14,7 @@ journalctl -b -u corosync
 
 # Man braucht mehrere Netzwerkkabel und denn Sinn zu kapieren
 qm migrate 106 tre --online --migration_network 10.1.2.0/24
+
 ``` 10.1.2.0/24 könnte z.B. eine schelle Direktverbindung sein. ``` 
 
 # Network 
