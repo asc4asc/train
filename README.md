@@ -124,3 +124,27 @@ git status
 git add
 git commit
 ```
+
+### Example Scenario change a disk in a proxmox zfs pool for boot.
+
+If your original boot drive was /dev/sda and it failed, and you replaced it with /dev/sdb, you would:
+
+Offline the failed drive:
+```
+zpool offline rpool /dev/sda
+```
+Replace the drive physically.
+
+Partition the new drive:
+```
+parted /dev/sdb mklabel gpt
+```
+Replace the drive in the ZFS pool:
+zpool replace rpool /dev/sda /dev/sdb
+
+Rebuild the boot loader:
+```
+proxmox-boot-tool init /dev/sdb2
+proxmox-boot-tool refresh
+```
+This process ensures that your Proxmox setup remains resilient and can recover from drive failures with minimal downtime.
