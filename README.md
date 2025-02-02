@@ -1,6 +1,19 @@
 # Train
 
 Notes for learning and be up to date in linux for me.
+
+# Wenn man mal die meldungen lesen will.
+check ob das auch in debian linux geht. Bild nach oben funktioniert dann auch?
+
+Have boot messages stay on tty1
+
+By default, Arch has the getty@tty1 service enabled. The service file already passes --noclear, which stops agetty from clearing the screen. However systemd clears the screen before starting it. To disable this behavior, create a drop-in file:
+´´´
+/etc/systemd/system/getty@tty1.service.d/noclear.conf
+[Service]
+TTYVTDisallocate=no
+´´´
+
 # proxmox
 ```
 pvecm status
