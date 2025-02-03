@@ -153,8 +153,9 @@ Partition the new drive:
 parted /dev/sdb mklabel gpt
 ```
 Replace the drive in the ZFS pool:
+```
 zpool replace rpool /dev/sda /dev/sdb
-
+```
 Rebuild the boot loader:
 ```
 proxmox-boot-tool init /dev/sdb2
