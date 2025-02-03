@@ -138,7 +138,8 @@ git add
 git commit
 ```
 
-### Example Scenario change a disk in a proxmox zfs pool for boot.
+### Example Scenario change a disk in a proxmox zfs pool for boot. 
+(Funktioniert so leider nicht, das defekte Device ist auch das neue. :-( )
 
 If your original boot drive was /dev/sda and it failed, and you replaced it with /dev/sdb, you would:
 
