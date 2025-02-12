@@ -17,6 +17,37 @@ sudo hostnamectl set-hostname $hostname
 # Verify the hostname
 hostnamectl
 ```
+# In python 
+```
+import os
+import re
+import subprocess
+
+def get_mac_address(interface='eth0'):
+    # Get the MAC address using the ip command
+    result = subprocess.run(['ip', 'link', 'show', interface], capture_output=True, text=True)
+    mac_address = re.search(r'ether ([\da-fA-F:]+)', result.stdout).group(1)
+    return mac_address
+
+def generate_hostname(mac_address):
+    # Replace colons with hyphens
+    hostname = mac_address.replace(':', '-')
+    return hostname
+
+def set_hostname(hostname):
+    # Set the hostname using hostnamectl
+    subprocess.run(['sudo', 'hostnamectl', 'set-hostname', hostname])
+
+def main():
+    mac_address = get_mac_address()
+    hostname = "demohost-" + generate_hostname(mac_address)
+    set_hostname(hostname)
+    print(f"Hostname set to: {hostname}")
+
+if __name__ == "__main__":
+    main()
+```
+
 
 # Wenn man mal die Meldungen lesen will.
 check ob das auch in debian linux geht. Bild nach oben funktioniert dann auch?
