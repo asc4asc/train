@@ -2,6 +2,9 @@
 
 Notes for learning and be up to date in linux for me.
 
+## Info
+net.ifnames=0 netcfg/choose_interface=eth0 
+
 # hostnamen um mac erweitern.
 ```
 #!/bin/bash
