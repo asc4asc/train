@@ -1,8 +1,9 @@
 # Train
 
 Notes for learning and be up to date in linux for me.
-```
+
 # hostnamen um mac erweitern.
+```
 #!/bin/bash
 
 # Get the MAC address
@@ -17,7 +18,7 @@ sudo hostnamectl set-hostname $hostname
 # Verify the hostname
 hostnamectl
 ```
-# In python 
+## In python 
 ```
 import os
 import re
