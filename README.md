@@ -1,6 +1,22 @@
 # Train
 
 Notes for learning and be up to date in linux for me.
+```
+# hostnamen um mac erweitern.
+#!/bin/bash
+
+# Get the MAC address
+mac_address=$(ip link show eth0 | awk '/ether/ {print $2}')
+
+# Replace colons with hyphens
+hostname=$hostname-$(echo $mac_address | sed 's/:/-/g')
+
+# Set the hostname
+sudo hostnamectl set-hostname $hostname
+
+# Verify the hostname
+hostnamectl
+```
 
 # Wenn man mal die Meldungen lesen will.
 check ob das auch in debian linux geht. Bild nach oben funktioniert dann auch?
