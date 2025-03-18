@@ -20,6 +20,11 @@ Mit einem gegebenen Präfix wird daraus die schon oben gezeigte IPv6-Adresse:
 2001:0db8:0100:f101:0210:a4ff:fe01:2345
 ```
 
+## Mit Linux anschauen
+```
+ip addr 
+```
+
 ## Info
 net.ifnames=0 netcfg/choose_interface=eth0 
 
