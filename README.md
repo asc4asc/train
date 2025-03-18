@@ -2,6 +2,24 @@
 
 Notes for learning and be up to date in linux for me.
 
+# IPV6
+### Automatisch erstellte Adressen (auch unter dem Namen stateless bekannt)
+Bei der Auto-Konfiguration wird der Hostteil der Adresse durch die Konvertierung der MAC-Adresse eines Interfaces (falls vorhanden) zu einer einmaligen IPv6 Adresse (mittels EUI-64 Methode) generiert. Falls keine MAC-Adresse verfügbar ist (z.B. bei virtuellen Interfaces), wird anstelle dessen etwas anderes herangezogen (wie z.B. die IPv4 Adresse oder die MAC-Adresse eines physikalischen Interfaces).
+
+Als Beispiel hat hier ein NIC folgende MAC-Adresse (48 bit):
+
+'''
+00:10:a4:01:23:45
+'''
+Diese wird gemäß demIEEE-Tutorial EUI-64 Design für EUI-48 Identifiers zum 64 bit Interface Identifier erweitert:
+'''
+0210:a4ff:fe01:2345
+'''
+Mit einem gegebenen Präfix wird daraus die schon oben gezeigte IPv6-Adresse:
+'''
+2001:0db8:0100:f101:0210:a4ff:fe01:2345
+'''
+
 ## Info
 net.ifnames=0 netcfg/choose_interface=eth0 
 
