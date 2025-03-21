@@ -25,6 +25,11 @@ Mit einem gegebenen Präfix wird daraus die schon oben gezeigte IPv6-Adresse:
 ip addr 
 ```
 
+# INFO IPV6
+Vergesse bitte die Begriffe intern und extern. Es gibt da sog. Scopes. Für dich relevant ist global (Global Unicast address, vom Provider), site-local (ULA fd00::/7, nicht öffentlich geroutet) und link-local (fe80::/10, gar nicht geroutet.) link-local generiert der Rechner selbst. Um den Rest muss man sich kümmern.
+Wenn du ein site-local-Präfix haben willst, musst du das über das Router-Advertisement bekannt geben lassen. Den sollte man dann immer bekannt geben, die Einstellung passt also. Die Bits 9-48 müssen von dir zufällig gesetzt werden. Hintergrund ist, dass so mehrere Sites (z.B. Firmennetze) ohne Störung zusammengelegt werden können und Routing zwischen diesen möglich ist. Zeige jetzt mal am Server die Ausgabe von
+
+
 ## Info
 net.ifnames=0 netcfg/choose_interface=eth0 
 
